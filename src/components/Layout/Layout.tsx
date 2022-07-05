@@ -11,11 +11,11 @@ interface PageFrontmatter {
 }
 
 export default function withLayout(p: PageFrontmatter) {
-  function Layout(props: any) {
+  function LayoutHome(props: any) {
     return <div {...props} meta={p} />
   }
-  Layout.appShell = AppShell
-  return Layout
+  LayoutHome.appShell = AppShell
+  return LayoutHome
 }
 
 function AppShell(props: { children: React.ReactNode }) {

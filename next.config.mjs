@@ -1,8 +1,19 @@
 import path from 'path'
 import UnoCSS from '@unocss/webpack'
+import Mdx from '@next/mdx'
+
+const withMDX = Mdx({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    providerImportSource: '@mdx-js/react',
+  },
+})
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   experimental: {
@@ -26,21 +37,8 @@ const nextConfig = {
     // Don't bundle the shim unnecessarily.
     config.resolve.alias['use-sync-external-store/shim'] = 'react'
 
-    // Add our custom markdown loader in order to support frontmatter
-    // and layout
-    config.module.rules.push({
-      test: /.mdx?$/, // load both .md and .mdx files
-      use: [
-        context.defaultLoaders.babel,
-        {
-          loader: '@mdx-js/loader',
-        },
-        path.resolve('./plugins/md-layout-loader.js'),
-      ],
-    })
-
     return config
   },
-}
+})
 
 export default nextConfig
