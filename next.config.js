@@ -20,9 +20,6 @@ const nextConfig = {
       // * https://webpack.js.org/configuration/cache/
       config.cache = false
     }
-    config.plugins.push(
-      UnoCSS(),
-    )
 
     // Don't bundle the shim unnecessarily.
     config.resolve.alias['use-sync-external-store/shim'] = 'react'
@@ -60,6 +57,10 @@ const nextConfig = {
         path.join(__dirname, './plugins/md-layout-loader'),
       ],
     })
+
+    config.plugins.push(
+      UnoCSS(),
+    )
 
     return config
   },

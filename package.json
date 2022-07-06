@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/react": "^2.1.2",
+    "@mdx-js/react": "^1.6.16",
     "clsx": "^1.2.0",
     "next": "12.2.0",
     "react": "18.2.0",

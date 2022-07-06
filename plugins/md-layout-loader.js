@@ -34,5 +34,7 @@ export default withLayout(${JSON.stringify(data)})
 
 ${content}`
 
+  console.log(code, data)
+
   return callback(null, code)
 }
