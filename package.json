@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 7777",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@lawlietff/eslint-config": "^0.0.9",
-    "@mdx-js/loader": "^2.1.2",
+    "@mdx-js/loader": "^1.6.16",
     "@mdx-js/mdx": "^2.1.2",
     "@next/mdx": "^12.2.0",
     "@types/node": "^18.0.1",
