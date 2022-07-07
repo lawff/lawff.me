@@ -2,7 +2,8 @@
  * Copyright (c) lawliet.
  */
 
-import * as React from 'react'
+import React from 'react'
+import Image from 'next/image'
 
 import NavLink from './NavLink'
 
@@ -15,44 +16,21 @@ declare global {
 
 export default function NavBar() {
   return (
-    <header className="header z-40">
+    <header className="z-40">
       <NavLink
         href="/"
+        classes="absolute top-1.5em left-1.5em"
       >
-        <img v-show="isDark" src="/logo-dark.svg?url" alt="logo" />
-        <img v-show="!isDark" src="/logo.svg?url" alt="logo" />
+        <Image className="" src="/logo.svg" alt="logo" width={37} height={37} />
       </NavLink>
-      <nav className="nav">
-        <div className="spacer" />
-        <div className="right">
-          <NavLink href="/posts" title="Blog">
+      <nav className="flex p-2em box-border justify-between">
+        <div className="flex-1" />
+        <div className="flex">
+          <NavLink href="/posts" title="Blog" classes="mr-1.5em">
             <span className="lt-md:hidden">Blog</span>
-            <div i-ri-article-line />
           </NavLink>
-          <NavLink href="/projects" title="Projects">
+          <NavLink href="/projects" title="Projects" classes="mr-1.5em">
             <span className="lt-md:hidden">Projects</span>
-            <div i-ri-lightbulb-line className="md:hidden" />
-          </NavLink>
-          <NavLink href="/talks" title="Talks">
-            <div i-ri-slideshow-2-line />
-          </NavLink>
-          <NavLink href="/podcasts" title="Podcasts">
-            <div i-ri-mic-line />
-          </NavLink>
-          <NavLink href="/streams" title="Streams">
-            <div i-ri-vidicon-line />
-          </NavLink>
-          <NavLink href="/demos" title="Demos">
-            <div i-ri-screenshot-line />
-          </NavLink>
-          <NavLink href="/bookmarks" title="Bookmarks">
-            <div i-ri-bookmark-line />
-          </NavLink>
-          <NavLink href="/notes" title="Notes">
-            <div i-ri-sticky-note-line />
-          </NavLink>
-          <NavLink href="/sponsors-list" title="Sponsors">
-            <div i-ri-heart-line />
           </NavLink>
         </div>
       </nav>

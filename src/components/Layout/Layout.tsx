@@ -11,7 +11,6 @@ interface PageFrontmatter {
 }
 
 export default function withLayout(p: PageFrontmatter) {
-  console.log(p)
   function LayoutHome(props: any) {
     return <div {...props} meta={p} />
   }

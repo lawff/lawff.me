@@ -3,27 +3,17 @@
  */
 
 import * as React from 'react'
-import cn from 'clsx'
 import NextLink from 'next/link'
 import { ExternalLink } from '~/components/ExternalLink'
 
 interface NavLinkProps {
   href: string
   children: React.ReactNode
-  isActive?: boolean
+  classes?: string
   title?: string
 }
 
-export default function NavLink({ href, children, isActive, title }: NavLinkProps) {
-  const classes = cn(
-    {
-      'text-link border-link dark:text-link-dark dark:border-link-dark font-bold':
-        isActive,
-    },
-    { 'border-transparent': !isActive },
-    'inline-flex w-full items-center border-b-2 justify-center text-base leading-9 px-3 py-0.5 hover:text-link dark:hover:text-link-dark whitespace-nowrap',
-  )
-
+export default function NavLink({ href, children, classes, title }: NavLinkProps) {
   if (href.startsWith('https://')) {
     return (
       <ExternalLink href={href} className={classes} title={title}>
