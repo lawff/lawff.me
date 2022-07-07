@@ -1,5 +1,6 @@
 const path = require('path')
 const UnoCSS = require('@unocss/webpack').default
+const { remarkPlugins } = require('./plugins/markdownToHtml')
 
 /**
  * @type {import('next').NextConfig}
@@ -54,9 +55,9 @@ const nextConfig = {
         options.defaultLoaders.babel,
         {
           loader: '@mdx-js/loader',
-          // options: {
-          //   remarkPlugins,
-          // },
+          options: {
+            remarkPlugins,
+          },
         },
         path.join(__dirname, './plugins/md-layout-loader'),
       ],

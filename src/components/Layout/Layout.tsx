@@ -4,15 +4,17 @@
 
 import * as React from 'react'
 import { Page } from './Page'
+import type { MarkdownProps } from './MarkdownPage'
+import { MarkdownPage } from './MarkdownPage'
 
 interface PageFrontmatter {
   title: string
   status: string
 }
 
-export default function withLayout(p: PageFrontmatter) {
-  function LayoutHome(props: any) {
-    return <div {...props} meta={p} />
+export default function withDocs(p: PageFrontmatter) {
+  function LayoutHome(props: MarkdownProps<PageFrontmatter>) {
+    return <MarkdownPage {...props} meta={p} />
   }
   LayoutHome.appShell = AppShell
   return LayoutHome

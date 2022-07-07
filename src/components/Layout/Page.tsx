@@ -18,8 +18,9 @@ export function Page({ children }: PageProps) {
       <main className="px-7 py-10">
         {/* No fallback UI so need to be careful not to suspend directly inside. */}
         <React.Suspense fallback={null}>
-
-          {children}
+          <div className="max-w-65ch m-auto">
+            {children}
+          </div>
 
         </React.Suspense>
         <Footer />

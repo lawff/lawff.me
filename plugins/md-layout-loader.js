@@ -1,4 +1,3 @@
-const path = require('path')
 const fm = require('gray-matter')
 
 // Makes mdx in next.js suck less by injecting necessary exports so that
@@ -16,16 +15,6 @@ const fm = require('gray-matter')
 module.exports = async function(src) {
   const callback = this.async()
   const { content, data } = fm(src)
-  const pageParentDir = path
-    .dirname(path.relative('./src/pages', this.resourcePath))
-    .split(path.sep)
-    .shift()
-  const layoutMap = {
-    blog: 'Post',
-    learn: 'Learn',
-    apis: 'API',
-  }
-  const layout = layoutMap[pageParentDir] || 'Home'
   const code
     = `import withLayout from '~/components/Layout/Layout';
 
@@ -33,8 +22,6 @@ export default withLayout(${JSON.stringify(data)})
 
 
 ${content}`
-
-  console.log(code, data)
 
   return callback(null, code)
 }
