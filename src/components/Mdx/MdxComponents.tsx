@@ -4,11 +4,12 @@
 
 import React from 'react'
 
+import ListPosts from '../ListPosts'
 import { H1, H2, H3, H4 } from './Heading'
 import Link from './Link'
 
 const P = (p: JSX.IntrinsicElements['p']) => (
-  <p className="whitespace-pre-wrap my-4" {...p} />
+  <p className="whitespace-pre-wrap my-4 font-300" {...p} />
 )
 
 const Strong = (strong: JSX.IntrinsicElements['strong']) => (
@@ -202,4 +203,5 @@ export const MDXComponents = {
   IllustrationBlock,
   Math,
   MathI,
+  ListPosts,
 }

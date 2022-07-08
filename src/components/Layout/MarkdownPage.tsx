@@ -5,7 +5,6 @@
 import * as React from 'react'
 // @ts-expect-error - TS doesn't know about the displayName property
 import { MDXContext } from '@mdx-js/react'
-import { useRouteMeta } from './useRouteMeta'
 import { MDXComponents } from '~/components/Mdx/MdxComponents'
 export interface MarkdownProps<Frontmatter> {
   meta: Frontmatter & { description?: string }
@@ -17,10 +16,8 @@ function MaxWidth({ children }: { children: any }) {
 }
 
 export function MarkdownPage<
-  T extends { title: string; status?: string } = { title: string; status?: string },
->({ children }: MarkdownProps<T>) {
-  const { route } = useRouteMeta()
-
+  T extends { title: string; status?: string; display?: string } = { title: string; status?: string; display?: string },
+>({ children, meta }: MarkdownProps<T>) {
   const anchors: Array<{
     url: string
     text: React.ReactNode
@@ -66,9 +63,6 @@ export function MarkdownPage<
     })
   }
 
-  if (!route)
-    console.error('This page was not added to one of the sidebar JSON files.')
-
   // Auto-wrap everything except a few types into
   // <MaxWidth> wrappers. Keep reusing the same
   // wrapper as long as we can until we meet
@@ -109,10 +103,17 @@ export function MarkdownPage<
   flushWrapper('last')
 
   return (
-    <article className="h-full mx-auto relative w-full min-w-0">
-      <MDXContext.Provider value={MDXComponents}>
-        {finalChildren}
-      </MDXContext.Provider>
-    </article>
+    <>
+      <div className="m-auto mb-8">
+        <h1 className="mb-0 font-800 text-2.25em">
+          { meta.display ?? meta.title }
+        </h1>
+      </div>
+      <article className="h-full w-full min-w-0">
+        <MDXContext.Provider value={MDXComponents}>
+          {finalChildren}
+        </MDXContext.Provider>
+      </article>
+    </>
   )
 }

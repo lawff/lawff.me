@@ -9,9 +9,10 @@ const MyDocument = () => {
   return (
     <Html lang="en">
       <Head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@200;400;600&display=swap" rel="stylesheet" />
       </Head>
-      <body className="font-sans antialiased text-lg bg-wash dark:bg-wash-dark text-secondary dark:text-secondary-dark leading-base">
+      <body className="font-sans text-#121314">
         <script
           dangerouslySetInnerHTML={{
             __html: `
