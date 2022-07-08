@@ -26,10 +26,10 @@ export default function NavBar() {
       <nav className="flex p-2em box-border justify-between">
         <div className="flex-1" />
         <div className="flex">
-          <NavLink href="/posts" title="Blog" classes="mr-1.5em">
+          <NavLink href="/posts" title="Blog" classes="mr-1.5em op-60 hover:op-100">
             <span className="lt-md:hidden">Blog</span>
           </NavLink>
-          <NavLink href="/projects" title="Projects" classes="mr-1.5em">
+          <NavLink href="/projects" title="Projects" classes="mr-1.5em op-60 hover:op-100">
             <span className="lt-md:hidden">Projects</span>
           </NavLink>
         </div>

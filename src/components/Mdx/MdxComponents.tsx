@@ -7,6 +7,7 @@ import React from 'react'
 import ListPosts from '../ListPosts'
 import { H1, H2, H3, H4 } from './Heading'
 import Link from './Link'
+import CodeBlock from './CodeBlock'
 
 const P = (p: JSX.IntrinsicElements['p']) => (
   <p className="whitespace-pre-wrap my-4 font-300" {...p} />
@@ -27,7 +28,7 @@ const UL = (p: JSX.IntrinsicElements['ul']) => (
 )
 
 const Divider = () => (
-  <hr className="my-2em mx-auto w-50px" />
+  <hr className="my-2em mx-auto w-50px b-colorrgba(125,125,125,0.3)" />
 )
 
 const Blockquote = ({
@@ -198,6 +199,7 @@ export const MDXComponents = {
   hr: Divider,
   a: Link,
   // The code block renders <pre> so we just want a div here.
+  code: CodeBlock,
   pre: (p: JSX.IntrinsicElements['div']) => <div {...p} />,
   Illustration,
   IllustrationBlock,

@@ -22,18 +22,20 @@ const ListPosts = () => {
               r.routes.map((route) => {
                 if (route.index) return null
                 return (
-                  <NavLink key={route.path} href={route.path} classes="mb-4 block">
-                    <li className="no-underline py-0.5em">
-                      <div className="title text-lg">
-                        { route.title }
-                      </div>
+                  <div key={route.path} className="mb-4 mt-2 op-60 hover:op-100">
+                    <NavLink href={route.path} classes="inline-block">
+                      <li className="no-underline py-0.5em inline">
+                        <div className="title text-lg">
+                          { route.title }
+                        </div>
 
-                      <div className="time opacity-50 text-sm -mt-1">
-                        { route.date }
-                        <span className="op80">· { route.readingTime }</span>
-                      </div>
-                    </li>
-                  </NavLink>
+                        <div className="time opacity-50 text-sm -mt-1">
+                          { route.date }
+                          <span className="op80">· { route.readingTime }</span>
+                        </div>
+                      </li>
+                    </NavLink>
+                  </div>
                 )
               })
             }

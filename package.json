@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "0.19.8-experimental.7",
     "@mdx-js/react": "^1.6.16",
     "clsx": "^1.2.0",
     "next": "12.2.0",
     "nprogress": "^0.2.0",
+    "parse-numeric-range": "^1.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
