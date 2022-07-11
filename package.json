@@ -20,6 +20,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@iconify-json/carbon": "^1.1.6",
     "@lawlietff/eslint-config": "^0.0.9",
     "@mdx-js/loader": "^1.6.16",
     "@mdx-js/mdx": "^2.1.2",

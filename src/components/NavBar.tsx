@@ -32,6 +32,9 @@ export default function NavBar() {
           <NavLink href="/projects" title="Projects" classes="mr-1.5em op-60 hover:op-100">
             <span className="lt-md:hidden">Projects</span>
           </NavLink>
+          <NavLink href="/notes" title="notes" classes="mr-1.5em op-60 hover:op-100">
+            <div className="i-carbon-align-box-middle-center lt-md:hidden"></div>
+          </NavLink>
         </div>
       </nav>
     </header>
