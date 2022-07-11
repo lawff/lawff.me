@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import '../styles/main.css'
+import '../styles/markdown.css'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 

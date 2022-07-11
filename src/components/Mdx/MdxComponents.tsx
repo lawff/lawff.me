@@ -5,12 +5,12 @@
 import React from 'react'
 
 import ListPosts from '../ListPosts'
+import CodeBlock from './CodeBlock'
 import { H1, H2, H3, H4 } from './Heading'
 import Link from './Link'
-import CodeBlock from './CodeBlock'
 
 const P = (p: JSX.IntrinsicElements['p']) => (
-  <p className="whitespace-pre-wrap my-4 font-300" {...p} />
+  <p className="whitespace-pre-wrap mb-4 font-300" {...p} />
 )
 
 const Strong = (strong: JSX.IntrinsicElements['strong']) => (
@@ -28,7 +28,7 @@ const UL = (p: JSX.IntrinsicElements['ul']) => (
 )
 
 const Divider = () => (
-  <hr className="my-2em mx-auto w-50px b-colorrgba(125,125,125,0.3)" />
+  <hr className="my-2em mx-auto w-50px b-[rgba(125,125,125,0.3)]" />
 )
 
 const Blockquote = ({
@@ -37,7 +37,7 @@ const Blockquote = ({
 }: JSX.IntrinsicElements['blockquote']) => {
   return (
     <blockquote
-      className="mdx-blockquote py-4 px-8 my-8 shadow-inner bg-highlight dark:bg-highlight-dark bg-opacity-50 rounded-lg leading-6 flex relative"
+      className="relative op-80 px-1.2em b-l-0.25rem b-l-[rgba(125,125,125,0.3)] mb-1em"
       {...props}>
       <span className="block relative">{children}</span>
     </blockquote>

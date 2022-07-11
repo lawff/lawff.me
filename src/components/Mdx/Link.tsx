@@ -1,6 +1,6 @@
 /* eslint-disable multiline-ternary */
 /*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) lawliet.
  */
 
 import * as React from 'react'

@@ -14,7 +14,7 @@ function areEqual(prevProps: FooterProps, props: FooterProps) {
 export const Footer = React.memo(
   () => {
     return (
-      <div className="mt-10 mb-6 max-w-65ch m-auto opacity-50 flex">
+      <div className="mt-10 mb-6 prose m-auto opacity-50 flex">
         <span className="text-sm"><a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className="color:inherit" rel="noreferrer">CC BY-NC-SA 4.0</a> 2022-PRESENT © Lawliet FF</span>
         <div className="flex-auto" />
       </div>
