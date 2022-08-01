@@ -3,6 +3,13 @@ title: Notes - Lawliet FF
 display: Notes
 ---
 
+### [Match Chinese Characters](https://antfu.me/posts/match-chinese-characters)
+
+```js
+/\p{Script=Han}/u
+!!'你好'.match(/\p{Script=Han}/u) // true
+```
+
 ### 解决 Homebrew 下载更新极慢的问题
 
 ```bash
