@@ -5,6 +5,7 @@
 import React from 'react'
 
 import ListPosts from '../ListPosts'
+import ExamPosts from '../ExamPosts'
 import CodeBlock from './CodeBlock'
 import { H1, H2, H3, H4 } from './Heading'
 import Link from './Link'
@@ -206,4 +207,5 @@ export const MDXComponents = {
   Math,
   MathI,
   ListPosts,
+  ExamPosts,
 }

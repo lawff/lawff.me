@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "path": "/exams/start",
+      "date": "2023-02-23",
+      "title": "法考？开始吧！",
+      "readingTime": "1 min read"
+    },
+    {
+      "path": "/exams/index",
+      "title": "EXAMS - Lawliet FF",
+      "index": true,
+      "readingTime": "1 min read"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 **[lawff.me](https://lawff.me)**
 
-my personal website powered by [Nextjs](https://nextjs.org/)
+my personal website powered by [Nextjs](https://nextjs.org/) with Markdown only.
 
 <br>
 

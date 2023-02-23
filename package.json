@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node ./scripts/generateBlogIndex.js && next dev --port 7777",
-    "build": "node ./scripts/generateBlogIndex.js && next build",
+    "dev": "node ./scripts/generateBlogIndex.js && node ./scripts/generateExamIndex.js && next dev --port 7777",
+    "build": "node ./scripts/generateBlogIndex.js && node ./scripts/generateExamIndex.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
