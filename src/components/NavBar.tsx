@@ -26,11 +26,11 @@ export default function NavBar() {
       <nav className="flex p-2em box-border justify-between">
         <div className="flex-1" />
         <div className="flex">
-          <NavLink href="/exams" title="Law" classes="mr-1.5em op-60 hover:op-100 lt-md:hidden">
-            <span className="lt-md:hidden">司法考试</span>
+          <NavLink href="/exams" title="Law" classes="mr-1.5em op-60 hover:op-100">
+            <span>Self</span>
           </NavLink>
-          <NavLink href="/posts" title="Blog" classes="mr-1.5em op-60 hover:op-100 lt-md:hidden">
-            <span className="lt-md:hidden">Blog</span>
+          <NavLink href="/posts" title="Blog" classes="mr-1.5em op-60 hover:op-100">
+            <span>Blog</span>
           </NavLink>
           <NavLink href="/projects" title="Projects" classes="mr-1.5em op-60 hover:op-100 lt-md:hidden">
             <span className="lt-md:hidden">Projects</span>
