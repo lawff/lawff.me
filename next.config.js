@@ -6,7 +6,6 @@ const { remarkPlugins } = require('./plugins/markdownToHtml')
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
-  distDir: 'build',
   pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
   experimental: {
     plugins: true,
